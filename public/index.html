@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       import React from 'react';
+import './App.css';
+import Banner from './Banner';
+import Nav from './Nav';
+import Requests from './Requests';
+import Row from './Row';
+
+function App() {
+  return (
+    <div className="App">
+      <Nav/>
+<Banner/>
+     <Row title="NETFLIX ORGINALS" fetchURL={Requests.fetchNetflixOriginals} isLargeRow={true} />
+     <Row title="Trending Now" fetchURL={Requests.fetchTrending}/>
+     <Row title="Top Rated" fetchURL={Requests.fetchTopRatedMovies}/>
+     <Row title="Action Movies" fetchURL={Requests.fetchActionMovies}/>
+     <Row title="Comedy Movies" fetchURL={Requests.fetchComedyMovies}/>
+     <Row title="Horror Movies" fetchURL={Requests.fetchHorrorMovies}/>
+     <Row title="Romance Movies" fetchURL={Requests.fetchRomanMovies}/>
+     <Row title="Documantaries" fetchURL={Requests.fetchDocumentaries}/>
+    </div>
+  );
+}
+
+export default App;
+ 
+    </script>
+</body>
+</html>
